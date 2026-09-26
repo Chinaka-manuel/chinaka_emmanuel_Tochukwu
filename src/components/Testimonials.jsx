@@ -9,11 +9,11 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <SectionTitle 
-          subtitle="Client feedback"
+          subtitle="Learner & client feedback"
           title="Testimonials"
         >
           <p className="text-dark-300 max-w-2xl mx-auto">
-            What clients and colleagues have to say about working with me
+            Feedback from clients, colleagues, and learners from online and in-person instruction
           </p>
         </SectionTitle>
 

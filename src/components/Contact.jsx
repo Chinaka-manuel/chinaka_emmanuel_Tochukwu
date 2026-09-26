@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import SectionTitle from './common/SectionTitle';
 import GradientCard from './common/GradientCard';
@@ -26,16 +27,29 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setSubmitMessage('Email service is not configured. Please try again later.');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await emailjs.send(serviceId, templateId, {
+        from_name: formData.name,
+        from_email: formData.email,
+        reply_to: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      }, publicKey);
+
       setSubmitMessage('Message sent successfully! I\'ll get back to you soon.');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => setSubmitMessage(''), 5000);
     } catch (error) {
       setSubmitMessage('Failed to send message. Please try again.');
     } finally {
@@ -47,19 +61,19 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'chinaka@email.com',
-      link: 'mailto:chinaka@email.com',
+      value: 'chinakamanuel@gmail.com',
+      link: 'mailto:chinakamanuel@gmail.com',
     },
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+1 (123) 456-7890',
-      link: 'tel:+11234567890',
+      value: '+2349035570702',
+      link: 'tel:+2349035570702',
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Port Harcourt, Nigeria',
       link: '#',
     },
   ];
@@ -116,7 +130,7 @@ const Contact = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
+                    placeholder="Chinaka Emmanuel"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-dark-800 dark:bg-white border border-dark-700 dark:border-gray-300 text-dark-100 dark:text-dark-900 placeholder-dark-500 dark:placeholder-dark-400 focus-ring transition-all"
                     whileFocus={{ borderColor: '#0ea5e9' }}
@@ -138,7 +152,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="chinakamanuel@gmail.com"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-dark-800 dark:bg-white border border-dark-700 dark:border-gray-300 text-dark-100 dark:text-dark-900 placeholder-dark-500 dark:placeholder-dark-400 focus-ring transition-all"
                     whileFocus={{ borderColor: '#0ea5e9' }}
@@ -192,6 +206,7 @@ const Contact = () => {
                 {/* Submit Message */}
                 {submitMessage && (
                   <motion.div
+                    aria-live="polite"
                     className={`p-4 rounded-lg text-sm font-semibold text-center ${
                       submitMessage.includes('success')
                         ? 'bg-green-500 bg-opacity-20 text-green-400'

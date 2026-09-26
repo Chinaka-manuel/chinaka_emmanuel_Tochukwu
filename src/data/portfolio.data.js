@@ -112,6 +112,16 @@ export const services = [
     title: 'System Architecture',
     description: 'Scalable system design with microservices and cloud-based solutions.',
   },
+  {
+    icon: 'FaSearch',
+    title: 'SEO Optimization',
+    description: 'Practical on-page and technical SEO, including keyword research, metadata, structured data, and performance improvements to help your site get discovered.',
+  },
+  {
+    icon: 'FaBrain',
+    title: 'AI Annotation & Rating',
+    description: 'Careful data labeling and AI response evaluation, with consistent annotation, quality review, and ratings guided by clear criteria.',
+  },
 ];
 
 export const experience = [
@@ -143,7 +153,7 @@ export const experience = [
 
 export const testimonials = [
   {
-    name: 'Sarah Johnson',
+    name: 'Priaz Onah',
     position: 'Project Manager',
     company: 'Tech Corp',
     image: 'https://via.placeholder.com/100x100?text=Sarah',
@@ -162,6 +172,20 @@ export const testimonials = [
     company: 'Digital Ventures',
     image: 'https://via.placeholder.com/100x100?text=Emma',
     testimonial: 'Professional, reliable, and incredibly talented. Chinaka went above and beyond to ensure project success.',
+  },
+  {
+    name: 'Online Learner (Draft)',
+    position: 'Web Development Student',
+    company: 'Online Instruction',
+    image: 'https://via.placeholder.com/100x100?text=Online+Learner',
+    testimonial: 'Chinaka makes online lessons easy to follow, breaking down web development concepts into practical steps. His clear explanations and thoughtful guidance helped me feel more confident applying what I learned.',
+  },
+  {
+    name: 'Workshop Participant (Draft)',
+    position: 'In-Person Student',
+    company: 'In-Person Instruction',
+    image: 'https://via.placeholder.com/100x100?text=Workshop+Student',
+    testimonial: 'Chinaka created an engaging, hands-on learning environment. He was patient with questions, explained concepts clearly, and made sure we could put each lesson into practice.',
   },
 ];
 

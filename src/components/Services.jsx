@@ -6,6 +6,8 @@ import {
   FaDatabase,
   FaRocket,
   FaTools,
+  FaSearch,
+  FaBrain,
 } from 'react-icons/fa';
 import SectionTitle from './common/SectionTitle';
 import GradientCard from './common/GradientCard';
@@ -18,6 +20,8 @@ const iconMap = {
   FaDatabase: FaDatabase,
   FaRocket: FaRocket,
   FaTools: FaTools,
+  FaSearch: FaSearch,
+  FaBrain: FaBrain,
 };
 
 const ServiceCard = ({ service, index }) => {
@@ -59,7 +63,7 @@ const Services = () => {
           title="Services"
         >
           <p className="text-dark-300 max-w-2xl mx-auto">
-            Comprehensive web development solutions tailored to meet your business needs
+            Web, search, and AI data services tailored to your business needs
           </p>
         </SectionTitle>
 

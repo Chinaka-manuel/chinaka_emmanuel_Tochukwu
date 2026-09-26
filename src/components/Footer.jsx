@@ -141,7 +141,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Chinaka Emmanuel Tochukwu. All rights reserved.
             </p>
             <p className="mt-2">
-              Designed & Built with{' '}
+              {' '}
               <span className="text-primary-400 dark:text-primary-600"></span> 
             </p>
           </div>

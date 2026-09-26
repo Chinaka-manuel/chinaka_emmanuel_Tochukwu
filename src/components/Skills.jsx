@@ -50,7 +50,7 @@ const Skills = () => {
           </p>
         </SectionTitle>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
           {/* Frontend Skills */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -108,6 +108,30 @@ const Skills = () => {
                   />
                 ))}
               </motion.div>
+            </GradientCard>
+          </motion.div>
+
+          {/* AI & Machine Learning */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <GradientCard className="h-full">
+              <h3 className="text-2xl font-bold text-primary-400 mb-6 flex items-center gap-2">
+                <span className="text-2xl">🧠</span> AI & Machine Learning
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {['Artificial Intelligence', 'Machine Learning', 'LLM Integration', 'Prompt Engineering'].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-md border border-primary-500/30 bg-dark-800 px-3 py-2 text-sm text-dark-200"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </GradientCard>
           </motion.div>
 

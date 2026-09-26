@@ -36,11 +36,15 @@ const About = () => {
             <div className="relative w-64 h-64">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-blue-600 rounded-2xl opacity-20 blur-2xl" />
               <motion.div
-                className="relative w-full h-full bg-gradient-to-br from-primary-500 to-blue-500 rounded-2xl shadow-2xl flex items-center justify-center"
+                className="relative h-full w-full overflow-hidden rounded-2xl shadow-2xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <span className="text-8xl">💻</span>
+                <img
+                  src="https://res.cloudinary.com/dybaoehch/image/upload/v1787136568/webcapzport/1787136562531_file_0000000049a872439f68a1b64574bed6%20%281%29.png.png"
+                  alt="About me"
+                  className="h-full w-full object-cover"
+                />
               </motion.div>
             </div>
           </motion.div>

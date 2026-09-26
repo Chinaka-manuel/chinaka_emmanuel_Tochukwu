@@ -9,6 +9,7 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   
   const texts = [
+    "Python Programmer",
     'Fullstack Developer',
     'MERN Stack Engineer',
     'Software Engineer',
@@ -88,102 +89,105 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="max-w-4xl mx-auto text-center z-10"
+        className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 py-16 md:grid-cols-2 md:gap-8 lg:gap-16"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        {/* Greeting */}
-        <motion.p 
-          className="text-primary-400 font-semibold text-lg mb-6"
-          variants={itemVariants}
-        >
-          👋 Welcome to my portfolio
-        </motion.p>
-
-        {/* Name */}
-        <motion.h1 
-          className="text-5xl md:text-7xl font-bold mb-6 gradient-text"
-          variants={itemVariants}
-        >
-          Chinaka Emmanuel
-        </motion.h1>
-
-        {/* Typing Effect */}
-        <motion.div 
-          className="text-2xl md:text-4xl font-semibold mb-6 h-16 flex items-center justify-center"
-          variants={itemVariants}
-        >
-          <span className="gradient-text">
-            {displayedText}
-            <span className="animate-pulse">|</span>
-          </span>
-        </motion.div>
-
-        {/* Bio */}
-        <motion.p 
-          className="text-lg text-dark-300 dark:text-dark-300 max-w-2xl mx-auto mb-8 leading-relaxed"
-          variants={itemVariants}
-        >
-          I craft elegant digital solutions with modern technologies. Specialized in building
-          scalable fullstack applications, creating beautiful user interfaces, and architecting
-          robust backend systems. Let's build something amazing together.
-        </motion.p>
-
-        {/* CTA Buttons */}
-        <motion.div 
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
-          variants={itemVariants}
-        >
-          <AnimatedButton 
-            variant="primary"
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+        <motion.div className="text-left" variants={containerVariants}>
+          <motion.p
+            className="mb-5 text-lg font-semibold text-primary-400"
+            variants={itemVariants}
           >
-            Hire Me
-          </AnimatedButton>
-          <AnimatedButton variant="secondary">
-            <a href="/resume.pdf" download>Download Resume</a>
-          </AnimatedButton>
-          <AnimatedButton 
-            variant="secondary"
-            onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+            Welcome to my portfolio
+          </motion.p>
+
+          <motion.h1
+            className="mb-5 text-3xl font-bold leading-tight gradient-text sm:text-5xl xl:text-6xl"
+            variants={itemVariants}
           >
-            View Projects
-          </AnimatedButton>
+            Chinaka T. Emmanuel
+          </motion.h1>
+
+          <motion.div
+            className="mb-5 flex min-h-12 items-center text-2xl font-semibold sm:text-3xl"
+            variants={itemVariants}
+          >
+            <span className="gradient-text">
+              {displayedText}
+              <span className="animate-pulse">|</span>
+            </span>
+          </motion.div>
+
+          <motion.p
+            className="mb-8 max-w-xl text-lg leading-relaxed text-dark-300 dark:text-dark-300"
+            variants={itemVariants}
+          >
+            I craft elegant digital solutions with modern technologies. Specialized in building
+            scalable fullstack applications, creating beautiful user interfaces, and architecting
+            robust backend systems. Let's build something amazing together.
+          </motion.p>
+
+          <motion.div
+            className="mb-10 flex flex-wrap justify-start gap-4"
+            variants={itemVariants}
+          >
+            <AnimatedButton
+              variant="primary"
+              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+            >
+              Hire Me
+            </AnimatedButton>
+            <AnimatedButton variant="secondary">
+              <a href="/resume.pdf" download>Download Resume</a>
+            </AnimatedButton>
+            <AnimatedButton
+              variant="secondary"
+              onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
+            >
+              View Projects
+            </AnimatedButton>
+          </motion.div>
+
+          <motion.div className="flex justify-start gap-4" variants={itemVariants}>
+            {socialLinks.map((link, index) => {
+              const Icon = link.icon;
+              return (
+                <motion.a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-icon text-xl"
+                  whileHover={{ scale: 1.2, boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)' }}
+                  whileTap={{ scale: 0.9 }}
+                  title={link.label}
+                >
+                  <Icon />
+                </motion.a>
+              );
+            })}
+          </motion.div>
         </motion.div>
 
-        {/* Social Links */}
-        <motion.div 
-          className="flex justify-center gap-4 mb-12"
-          variants={itemVariants}
-        >
-          {socialLinks.map((link, index) => {
-            const Icon = link.icon;
-            return (
-              <motion.a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-icon text-xl"
-                whileHover={{ scale: 1.2, boxShadow: '0 0 20px rgba(14, 165, 233, 0.5)' }}
-                whileTap={{ scale: 0.9 }}
-                title={link.label}
-              >
-                <Icon />
-              </motion.a>
-            );
-          })}
-        </motion.div>
-
-        {/* Scroll Indicator */}
         <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="mt-8"
+          className="flex justify-center md:justify-end"
+          variants={itemVariants}
         >
-          <FaArrowDown className="mx-auto text-primary-400 text-2xl" />
+          <img
+            src="https://res.cloudinary.com/dybaoehch/image/upload/v1788102958/mypx2_bz0wip.png"
+            alt="Chinaka Emmanuel"
+            className="h-auto max-h-[100vh] w-full max-w-md object-contain lg:max-w-lg"
+          />
         </motion.div>
+      </motion.div>
+
+      <motion.div
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2"
+      >
+        <FaArrowDown className="text-2xl text-primary-400" />
       </motion.div>
     </section>
   );
