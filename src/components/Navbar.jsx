@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 import { Link } from 'react-scroll';
-import { useTheme } from '../ThemeContext';
+import { useTheme } from '../theme';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

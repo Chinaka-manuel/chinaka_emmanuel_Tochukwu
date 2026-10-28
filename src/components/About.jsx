@@ -20,7 +20,7 @@ const About = () => {
           title="About Me"
         >
           <p className="text-dark-300 dark:text-dark-600 max-w-2xl mx-auto">
-            Passionate software engineer with a proven track record of delivering high-quality, scalable web applications
+            Fullstack development, AI evaluation and annotation, machine learning data workflows, and search quality rating
           </p>
         </SectionTitle>
 
@@ -64,8 +64,9 @@ const About = () => {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5 }}
             >
-              I'm a fullstack developer with over 3 years of professional experience building web applications. 
-              My passion lies in creating elegant, efficient solutions to complex problems using modern web technologies.
+              I'm a fullstack developer with over 3 years of professional experience building web applications.
+              I also work as an AI evaluator and annotator, assessing AI-generated content and labeling data
+              to support machine learning workflows.
             </motion.p>
 
             <motion.p 
@@ -75,9 +76,9 @@ const About = () => {
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              I specialize in building scalable MERN stack applications with a focus on clean code, 
-              performance optimization, and user experience. When I'm not coding, you'll find me exploring 
-              new technologies, contributing to open source, or writing technical blog posts.
+              My work also includes search quality rating: evaluating results for relevance and usefulness
+              against clear guidelines. Across development, AI evaluation, and search assessment, I bring
+              careful attention to detail and a focus on consistent, user-centered quality.
             </motion.p>
 
             <motion.div
@@ -93,15 +94,15 @@ const About = () => {
               <ul className="space-y-2 text-dark-300 dark:text-dark-600">
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary-400 dark:bg-primary-600 rounded-full" />
-                  Building responsive, performant user interfaces
+                  Building responsive, performant fullstack applications
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary-400 dark:bg-primary-600 rounded-full" />
-                  Designing scalable backend architectures
+                  Evaluating and annotating AI outputs and machine learning data
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-primary-400 dark:bg-primary-600 rounded-full" />
-                  Optimizing performance and security
+                  Rating search results for relevance, usefulness, and quality
                 </li>
               </ul>
             </motion.div>

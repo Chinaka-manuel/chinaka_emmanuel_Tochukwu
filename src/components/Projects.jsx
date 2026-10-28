@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import SectionTitle from './common/SectionTitle';
-import GradientCard from './common/GradientCard';
 import { projects } from '../data/portfolio.data';
 import AnimatedButton from './common/AnimatedButton';
 
@@ -99,7 +98,7 @@ const Projects = () => {
           title="Featured Projects"
         >
           <p className="text-dark-300 max-w-2xl mx-auto">
-            A showcase of my recent work demonstrating expertise in fullstack development, UI/UX design, and system architecture
+            Selected software projects in fullstack development and UI/UX, alongside my work in AI evaluation and annotation, machine learning data workflows, and search quality rating.
           </p>
         </SectionTitle>
 

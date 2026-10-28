@@ -1,20 +1,37 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import AnimatedButton from './common/AnimatedButton';
 
+const particles = [
+  { x: '8%', y: '18%', size: 5, duration: 7, delay: 0 },
+  { x: '18%', y: '72%', size: 4, duration: 8, delay: 1.4 },
+  { x: '29%', y: '34%', size: 6, duration: 9, delay: 0.8 },
+  { x: '39%', y: '84%', size: 4, duration: 7.5, delay: 2.2 },
+  { x: '48%', y: '15%', size: 5, duration: 8.5, delay: 1 },
+  { x: '57%', y: '57%', size: 4, duration: 7, delay: 2.8 },
+  { x: '66%', y: '27%', size: 6, duration: 9.5, delay: 1.8 },
+  { x: '74%', y: '78%', size: 4, duration: 8, delay: 0.4 },
+  { x: '83%', y: '43%', size: 5, duration: 7.5, delay: 2.4 },
+  { x: '92%', y: '17%', size: 4, duration: 9, delay: 1.2 },
+  { x: '12%', y: '48%', size: 4, duration: 8.5, delay: 3 },
+  { x: '87%', y: '88%', size: 6, duration: 7, delay: 0.6 },
+];
+
 const Hero = () => {
+  const shouldReduceMotion = useReducedMotion();
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
   const texts = [
     "Python Programmer",
-    'Fullstack Developer',
-    'MERN Stack Engineer',
-    'Software Engineer',
-    'React Developer',
-    'Backend Developer',
+    'MERN Stack Developer',
+    'PERN Stack Developer',
+    'DevOps Engineer',
+    'AI Evaluator / Annotator',
+    'Machine Learning',
+    'Search Quality Rater',
   ];
 
   const textIndex = currentIndex % texts.length;
@@ -69,7 +86,7 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-primary-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
           animate={{
@@ -86,6 +103,45 @@ const Hero = () => {
           }}
           transition={{ duration: 20, repeat: Infinity, delay: 2 }}
         />
+        {particles.map((particle, index) => (
+          <motion.span
+            key={index}
+            className="absolute rounded-full bg-cyan-200"
+            style={{
+              left: particle.x,
+              top: particle.y,
+              width: particle.size,
+              height: particle.size,
+              boxShadow: '0 0 12px 3px rgba(125, 211, 252, 0.55)',
+            }}
+            animate={shouldReduceMotion ? undefined : {
+              opacity: [0.35, 0.95, 0.35],
+              x: [0, 10, 0],
+              y: [0, -18, 0],
+              scale: [0.8, 1.15, 0.8],
+            }}
+            transition={{
+              duration: particle.duration,
+              delay: particle.delay,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          >
+            <motion.span
+              className="absolute inset-0 rounded-full border border-cyan-200/70"
+              animate={shouldReduceMotion ? undefined : {
+                opacity: [0.65, 0],
+                scale: [1, 3.5],
+              }}
+              transition={{
+                duration: particle.duration / 2,
+                delay: particle.delay,
+                repeat: Infinity,
+                ease: 'easeOut',
+              }}
+            />
+          </motion.span>
+        ))}
       </div>
 
       <motion.div
@@ -120,12 +176,12 @@ const Hero = () => {
           </motion.div>
 
           <motion.p
-            className="mb-8 max-w-xl text-lg leading-relaxed text-dark-300 dark:text-dark-300"
+            className="mb-8 max-w-xl rounded-2xl border border-white/10 bg-white/5 px-5 py-5 text-lg leading-relaxed text-dark-200 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-gray-200/70 dark:bg-white/50 dark:text-dark-700 sm:px-6"
             variants={itemVariants}
           >
-            I craft elegant digital solutions with modern technologies. Specialized in building
-            scalable fullstack applications, creating beautiful user interfaces, and architecting
-            robust backend systems. Let's build something amazing together.
+            I'm a fullstack developer, AI Evaluator / Annotator, and Search Quality Rater, with a
+            focus on machine learning data workflows. I build scalable web applications and assess
+            AI-generated content and search results for quality and relevance.
           </motion.p>
 
           <motion.div

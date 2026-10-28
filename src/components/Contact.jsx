@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 import SectionTitle from './common/SectionTitle';
 import GradientCard from './common/GradientCard';
@@ -14,9 +13,6 @@ const Contact = () => {
     message: '',
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -25,36 +21,21 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const message = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Subject: ${formData.subject}`,
+      '',
+      'Message:',
+      formData.message,
+    ].join('\n');
 
-    if (!serviceId || !templateId || !publicKey) {
-      setSubmitMessage('Email service is not configured. Please try again later.');
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      await emailjs.send(serviceId, templateId, {
-        from_name: formData.name,
-        from_email: formData.email,
-        reply_to: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-      }, publicKey);
-
-      setSubmitMessage('Message sent successfully! I\'ll get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      setSubmitMessage('Failed to send message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.assign(
+      `https://wa.me/2349035570702?text=${encodeURIComponent(message)}`
+    );
   };
 
   const contactInfo = [
@@ -203,22 +184,6 @@ const Contact = () => {
                   />
                 </motion.div>
 
-                {/* Submit Message */}
-                {submitMessage && (
-                  <motion.div
-                    aria-live="polite"
-                    className={`p-4 rounded-lg text-sm font-semibold text-center ${
-                      submitMessage.includes('success')
-                        ? 'bg-green-500 bg-opacity-20 text-green-400'
-                        : 'bg-red-500 bg-opacity-20 text-red-400'
-                    }`}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                  >
-                    {submitMessage}
-                  </motion.div>
-                )}
-
                 {/* Submit Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -229,12 +194,14 @@ const Contact = () => {
                   <AnimatedButton
                     variant="primary"
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    Send via WhatsApp
                   </AnimatedButton>
                 </motion.div>
+                <p className="text-sm text-center text-dark-400 dark:text-dark-600">
+                  WhatsApp will open with your message ready. Tap Send there to deliver it.
+                </p>
               </form>
             </GradientCard>
           </motion.div>

@@ -85,9 +85,8 @@ const Services = () => {
             Ready to work together?
           </h3>
           <p className="text-dark-300 mb-6 max-w-2xl mx-auto">
-            I'm always excited about new projects and opportunities. Whether you need a complete website,
-            API development, or consultation on your tech stack, let's discuss how I can help bring your
-            vision to life.
+            I'm always excited about new projects and opportunities. Whether you need a website, API,
+            AI evaluation and annotation, or search quality rating, let's discuss how I can help.
           </p>
           <a 
             href="#contact"

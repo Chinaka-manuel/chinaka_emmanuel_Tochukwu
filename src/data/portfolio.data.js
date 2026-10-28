@@ -34,7 +34,7 @@ export const projects = [
     title: 'E-Commerce Platform',
     description: 'A full-stack MERN e-commerce platform with payment integration, product filtering, and admin dashboard.',
     image: 'https://via.placeholder.com/500x300?text=E-Commerce+Platform',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
+    technologies: ['React','supabase', 'Stripe', 'Tailwind CSS'],
     features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Admin dashboard', 'User authentication'],
     github: 'https://github.com',
     live: 'https://demo.com',
@@ -119,8 +119,13 @@ export const services = [
   },
   {
     icon: 'FaBrain',
-    title: 'AI Annotation & Rating',
-    description: 'Careful data labeling and AI response evaluation, with consistent annotation, quality review, and ratings guided by clear criteria.',
+    title: 'AI Evaluation & Annotation',
+    description: 'Evaluate AI-generated responses and annotate data for machine learning workflows, applying project guidelines and quality checks consistently.',
+  },
+  {
+    icon: 'FaSearch',
+    title: 'Search Quality Rating',
+    description: 'Assess search results for relevance, usefulness, and intent match, using rating guidelines to deliver consistent quality judgments.',
   },
 ];
 

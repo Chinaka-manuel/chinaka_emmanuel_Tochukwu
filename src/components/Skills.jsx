@@ -46,7 +46,7 @@ const Skills = () => {
           title="Skills & Technologies"
         >
           <p className="text-dark-300 max-w-2xl mx-auto">
-            Proficient in modern web technologies with a strong foundation in fullstack development
+            Fullstack development plus AI evaluation and annotation, machine learning data workflows, and search quality rating
           </p>
         </SectionTitle>
 
@@ -123,7 +123,7 @@ const Skills = () => {
                 <span className="text-2xl">🧠</span> AI & Machine Learning
               </h3>
               <div className="flex flex-wrap gap-3">
-                {['Artificial Intelligence', 'Machine Learning', 'LLM Integration', 'Prompt Engineering'].map((skill) => (
+                {['AI Evaluation', 'AI Annotation', 'Machine Learning', 'LLM Response Quality', 'Data Labeling', 'Search Quality Rating'].map((skill) => (
                   <span
                     key={skill}
                     className="rounded-md border border-primary-500/30 bg-dark-800 px-3 py-2 text-sm text-dark-200"
@@ -174,9 +174,9 @@ const Skills = () => {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-center text-dark-200 font-semibold mb-6">Tech Stack & Ecosystems</h3>
+          <h3 className="text-center text-dark-200 font-semibold mb-6">Tech Stack, AI & Quality Skills</h3>
           <div className="flex flex-wrap justify-center gap-3">
-            {['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'REST APIs', 'Git'].map((tech, index) => (
+            {['React', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'REST APIs', 'Git', 'AI Evaluation', 'AI Annotation', 'Machine Learning', 'Search Quality Rating'].map((tech, index) => (
               <motion.div
                 key={index}
                 className="px-4 py-2 rounded-full bg-dark-800 border border-primary-500 border-opacity-30 text-dark-200 text-sm"
