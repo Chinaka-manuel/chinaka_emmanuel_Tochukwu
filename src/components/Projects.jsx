@@ -18,7 +18,7 @@ const ProjectCard = ({ project, index }) => {
           <motion.img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover opacity-80"
+            className="w-full h-[40%] object-contain opacity-80"
             whileHover={{ scale: 1.08 }}
             transition={{ duration: 0.3 }}
           />
