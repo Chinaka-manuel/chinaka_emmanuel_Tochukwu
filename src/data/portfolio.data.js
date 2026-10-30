@@ -172,7 +172,7 @@ export const experience = [
     year: '2021 - 2023',
     title: 'Junior Web Developer',
     company: 'Digismath Technologies',
-    description: 'Built responsive web sitees(html, css and Javascript, bootstrap), fixed bugs, and contributed to codebase improvements.',
+    description: 'Built responsive web sites(html, css and Javascript, bootstrap), fixed bugs, and contributed to codebase improvements.',
   },
 ];
 
