@@ -167,15 +167,7 @@ const Timeline = () => {
                     <p className="text-white font-semibold text-sm">HTML, CSS and Javascript for Web Development</p>
                     <p className="text-dark-400 text-xs">John Hopkins University(Coursera) | 2023</p>
                   </div>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary-400">✓</span>
-                  <div>
-                    <p className="text-white font-semibold text-sm">The Complete JavaScript Course</p>
-                    <p className="text-dark-400 text-xs">Udemy | 2021</p>
-                  </div>
-                </li>
-               
+                </li>   
                 <li className="flex items-start gap-2">
                   <span className="text-primary-400">✓</span>
                   <div>

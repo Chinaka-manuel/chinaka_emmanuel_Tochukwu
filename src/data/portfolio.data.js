@@ -36,8 +36,8 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793288831/Your_Favorite_Products_One_Click_Away_utmbiw.png',
     technologies: ['React','supabase', 'Stripe', 'Tailwind CSS'],
     features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Admin dashboard', 'User authentication'],
-    github: 'https://github.com',
-    live: 'https://demo.com',
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://ecommerce-platform.vercel.app/',
   },
   {
     id: 2,
@@ -88,6 +88,16 @@ export const projects = [
     features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Admin dashboard', 'User authentication'],
     github: 'https://github.com/Chinaka-manuel',
     live: 'https://ecommerce-platform.vercel.app/',
+  },
+  {
+    id: 5,
+    title: 'Social Media Platform',
+    description: 'A modern social media platform for connecting users and sharing content.',
+    image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793288831/Your_Favorite_Products_One_Click_Away_utmbiw.png',
+    technologies: ['React','Mongodb', 'Stripe','paystack','Tailwind CSS','Node.js', 'Express'],
+    features: ['User profiles', 'Content sharing', 'Social interactions', 'Notifications', 'Admin dashboard'],
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://social-media-platform.vercel.app/',
   },
 ];
 
@@ -142,7 +152,7 @@ export const services = [
 export const experience = [
   {
     year: '2025 - Present',
-    title: 'Senior Full Stack Developer',
+    title: 'Senior Full Stack Developer(Contract Instructor)',
     company: 'WebCapz Technologies.',
     description: 'Lead development of web applications, mentor junior developers and Tech Newbies, Worked on architect scalable systems.',
   },
@@ -162,41 +172,41 @@ export const experience = [
     year: '2021 - 2023',
     title: 'Junior Web Developer',
     company: 'Digismath Technologies',
-    description: 'Built responsive web applications, fixed bugs, and contributed to codebase improvements.',
+    description: 'Built responsive web sitees(html, css and Javascript, bootstrap), fixed bugs, and contributed to codebase improvements.',
   },
 ];
 
 export const testimonials = [
   {
-    name: 'Priaz Onah',
-    position: 'Project Manager',
-    company: 'Tech Corp',
-    image: 'https://via.placeholder.com/100x100?text=Sarah',
+    name: 'Louis Nwadike',
+    position: 'CEO',
+    company: 'Lazervault Technologies Limited',
+    image: 'https://via.placeholder.com/100x100?text=Priaz',
     testimonial: 'Chinaka is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are outstanding.',
   },
   {
-    name: 'Michael Chen',
-    position: 'CTO',
-    company: 'StartUp Labs',
+    name: 'Joshua Eshet',
+    position: 'Student',
+    company: 'Webcapz Technologies',
     image: 'https://via.placeholder.com/100x100?text=Michael',
-    testimonial: 'Working with Chinaka was a game-changer for our projects. His technical expertise and dedication are unmatched.',
+    testimonial: 'Learning and Working with Chinaka was a game-changer for our projects. His technical expertise and dedication are unmatched.',
   },
   {
-    name: 'Emma Davis',
-    position: 'Founder',
-    company: 'Digital Ventures',
+    name: 'Benjamin Johnbusco',
+    position: 'Student',
+    company: 'Webcapz Technologies',
     image: 'https://via.placeholder.com/100x100?text=Emma',
     testimonial: 'Professional, reliable, and incredibly talented. Chinaka went above and beyond to ensure project success.',
   },
   {
-    name: 'Online Learner (Draft)',
+    name: 'Abundance',
     position: 'Web Development Student',
     company: 'Online Instruction',
     image: 'https://via.placeholder.com/100x100?text=Online+Learner',
     testimonial: 'Chinaka makes online lessons easy to follow, breaking down web development concepts into practical steps. His clear explanations and thoughtful guidance helped me feel more confident applying what I learned.',
   },
   {
-    name: 'Workshop Participant (Draft)',
+    name: 'Moses',
     position: 'In-Person Student',
     company: 'In-Person Instruction',
     image: 'https://via.placeholder.com/100x100?text=Workshop+Student',
@@ -206,7 +216,7 @@ export const testimonials = [
 
 export const stats = [
   { label: 'Years of Experience', value: '3+' },
-  { label: 'Projects Completed', value: '25+' },
+  { label: 'Projects Completed', value: '20+' },
   { label: 'Happy Clients', value: '15+' },
-  { label: 'Technologies Mastered', value: '20+' },
+  { label: 'Technologies Mastered', value: '15+' },
 ];
