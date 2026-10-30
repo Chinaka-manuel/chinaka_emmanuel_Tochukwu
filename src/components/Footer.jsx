@@ -7,10 +7,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: FaGithub, url: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaGithub, url: 'https://github.com/Chinaka-manuel', label: 'GitHub' },
+    { icon: FaLinkedin, url: 'https://www.linkedin.com/in/chinaka-emmanuel-tochukwu-8396a01b5/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7ajImlFKRLKLHbCyR6HDhQ%3D%3D', label: 'LinkedIn' },
     { icon: FaTwitter, url: 'https://twitter.com', label: 'Twitter' },
-    { icon: FaEnvelope, url: 'mailto:chinaka@email.com', label: 'Email' },
+    { icon: FaEnvelope, url: 'mailto:chinakamanuel@email.com', label: 'Email' },
   ];
 
   const footerLinks = [
