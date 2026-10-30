@@ -56,7 +56,7 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793286184/Human-Powered_AI_Raters_Landing_Page_dqyxzv.png',
     technologies: ['AI Evaluation', 'AI Annotation', 'Machine Learning Data', 'Search Quality Rating'],
     features: ['Assess AI response quality', 'Annotate and label data', 'Rate search relevance and usefulness', 'Apply rating guidelines consistently'],
-    github: 'https://github.com/Chinaka-manuel',
+    github: 'https://github.com/Chinaka-manue',
     live: 'https://a1raters-com-rho.vercel.app/',
   },
   {
@@ -66,7 +66,7 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793290626/Hospital_Management_System_Dashboard_djojdm.png',
     technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
     features: ['Patient record management', 'Appointment scheduling', 'Staff management', 'Hospital operations dashboard'],
-    github: 'https://github.com',
+    github: 'https://github.com/Chinaka-manuel',
     live: 'https://demo.com',
   },
   {
