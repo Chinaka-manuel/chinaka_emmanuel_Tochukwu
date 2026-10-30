@@ -46,8 +46,8 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793286187/Smarter_School_Management_Hero_rrjwt8.png',
     technologies: ['React', 'Node.js', 'Socket.io', 'Express.js', 'MongoDB'],
     features: ['Real-time updates', 'Chat system', 'Admin Dashboard', 'Students record tracking'],
-    github: 'https://github.com',
-    live: 'https://demo.com',
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://lazervaultech.vercel.app/',
   },
   {
     id: 3,
@@ -56,6 +56,8 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793286184/Human-Powered_AI_Raters_Landing_Page_dqyxzv.png',
     technologies: ['AI Evaluation', 'AI Annotation', 'Machine Learning Data', 'Search Quality Rating'],
     features: ['Assess AI response quality', 'Annotate and label data', 'Rate search relevance and usefulness', 'Apply rating guidelines consistently'],
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://a1raters-com-rho.vercel.app/',
   },
   {
     id: 4,
@@ -74,8 +76,18 @@ export const projects = [
     image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793291177/Logistics_Expertise_Feature_Cards_qg5y3z.png',
     technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
     features: ['Shipment tracking', 'Delivery management', 'Route coordination', 'Logistics operations dashboard'],
-    github: 'https://github.com',
-    live: 'https://demo.com',
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://www.stockgloballogistics.com/',
+  },
+  {
+    id: 5,
+    title: 'Agricultural E-commerce Website',
+    description: 'A full-stack MERN e-commerce platform with payment integration, product filtering, and admin dashboard.',
+    image: 'https://res.cloudinary.com/dybaoehch/image/upload/v1793288831/Your_Favorite_Products_One_Click_Away_utmbiw.png',
+    technologies: ['React','Mongodb', 'Stripe','paystack','Tailwind CSS','Node.js', 'Express'],
+    features: ['Product catalog', 'Shopping cart', 'Payment processing', 'Admin dashboard', 'User authentication'],
+    github: 'https://github.com/Chinaka-manuel',
+    live: 'https://ecommerce-platform.vercel.app/',
   },
 ];
 
@@ -135,9 +147,9 @@ export const experience = [
     description: 'Lead development of web applications, mentor junior developers and Tech Newbies, Worked on architect scalable systems.',
   },
   {
-    year: '2023 - 2025',
+    year: '2023 - Present',
     title: 'Full Stack Developer',
-    company: 'LazerVoult Technologies',
+    company: 'Lazervault Technologies Limited',
     description: 'Developed and maintained multiple client projects, implemented REST APIs, and optimized performance.',
   },
   {

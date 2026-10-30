@@ -2,11 +2,14 @@ import { motion } from 'framer-motion';
 
 const AnimatedButton = ({ 
   variant = 'primary', 
+  as = 'button',
   children, 
   onClick, 
   className = '',
   ...props 
 }) => {
+  const MotionComponent = as === 'a' ? motion.a : motion.button;
+
   const baseClasses = {
     primary: 'btn-primary',
     secondary: 'btn-secondary',
@@ -14,7 +17,7 @@ const AnimatedButton = ({
   };
 
   return (
-    <motion.button
+    <MotionComponent
       className={`${baseClasses[variant]} ${className}`}
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
@@ -23,7 +26,7 @@ const AnimatedButton = ({
       {...props}
     >
       {children}
-    </motion.button>
+    </MotionComponent>
   );
 };
 
