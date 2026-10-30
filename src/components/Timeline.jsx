@@ -128,10 +128,10 @@ const Timeline = () => {
                 Bachelor of Science in Computer Science
               </h4>
               <p className="text-primary-400 font-semibold mb-2">
-                University Name
+                University of Abuja
               </p>
               <p className="text-dark-300 text-sm mb-3">
-                Graduated: 2021
+                Graduated: 2018
               </p>
               <p className="text-dark-300">
                 Strong foundation in data structures, algorithms, and software engineering principles.
@@ -150,8 +150,22 @@ const Timeline = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-primary-400">✓</span>
                   <div>
-                    <p className="text-white font-semibold text-sm">Full Stack Web Development</p>
-                    <p className="text-dark-400 text-xs">Udemy | 2022</p>
+                    <p className="text-white font-semibold text-sm">Data Science and Analytics</p>
+                    <p className="text-dark-400 text-xs">HP Foundation | 2026</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-400">✓</span>
+                  <div>
+                    <p className="text-white font-semibold text-sm">Introduction to Cybersecurity Awareness</p>
+                    <p className="text-dark-400 text-xs">HP Foundation | 2026</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-400">✓</span>
+                  <div>
+                    <p className="text-white font-semibold text-sm">HTML, CSS and Javascript for Web Development</p>
+                    <p className="text-dark-400 text-xs">John Hopkins University(Coursera) | 2023</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
@@ -159,6 +173,14 @@ const Timeline = () => {
                   <div>
                     <p className="text-white font-semibold text-sm">The Complete JavaScript Course</p>
                     <p className="text-dark-400 text-xs">Udemy | 2021</p>
+                  </div>
+                </li>
+               
+                <li className="flex items-start gap-2">
+                  <span className="text-primary-400">✓</span>
+                  <div>
+                    <p className="text-white font-semibold text-sm">SoftWare Engineering (Linux Command, Bash Scripting, Version Control(Git and Github), C Programming, Python Programming, React.Js, Node.js, Express.Js, Networking, Docker and Nginx )</p>
+                    <p className="text-dark-400 text-xs">Digismath Technology Limited | 2023</p>
                   </div>
                 </li>
               </ul>
