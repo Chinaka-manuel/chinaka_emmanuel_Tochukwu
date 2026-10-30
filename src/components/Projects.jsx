@@ -61,28 +61,34 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* Buttons */}
-          <div className="flex gap-3">
-            <AnimatedButton
-              variant="secondary"
-              className="flex-1 text-xs justify-center"
-              as="a"
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className="mr-2" /> Code
-            </AnimatedButton>
-            <AnimatedButton
-              variant="primary"
-              className="flex-1 text-xs justify-center"
-              as="a"
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaExternalLinkAlt className="mr-2" /> Live Demo
-            </AnimatedButton>
-          </div>
+          {(project.github || project.live) && (
+            <div className="flex gap-3">
+              {project.github && (
+                <AnimatedButton
+                  variant="secondary"
+                  className="flex-1 text-xs justify-center"
+                  as="a"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub className="mr-2" /> Code
+                </AnimatedButton>
+              )}
+              {project.live && (
+                <AnimatedButton
+                  variant="primary"
+                  className="flex-1 text-xs justify-center"
+                  as="a"
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaExternalLinkAlt className="mr-2" /> Live Demo
+                </AnimatedButton>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
