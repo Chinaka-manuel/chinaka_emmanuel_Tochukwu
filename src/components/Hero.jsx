@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import AnimatedButton from './common/AnimatedButton';
+import resumePdf from '../assets/Chinaka_Emmanuel_Resume_with_LinkedIn.pdf';
 
 const particles = [
   { x: '8%', y: '18%', size: 5, duration: 7, delay: 0 },
@@ -194,8 +195,13 @@ const Hero = () => {
             >
               Hire Me
             </AnimatedButton>
-            <AnimatedButton variant="secondary">
-              <a href="/resume.pdf" download>Download Resume</a>
+            <AnimatedButton
+              as="a"
+              href={resumePdf}
+              download="Chinaka_Emmanuel_Resume_with_LinkedIn.pdf"
+              variant="secondary"
+            >
+              Download Resume
             </AnimatedButton>
             <AnimatedButton
               variant="secondary"
